@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Profil Professionnel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .question p {
+            margin: 0;
+            font-weight: bold;
+        }
+        .results {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quiz : Quel est votre profil professionnel ?</h1>
+    <p>Répondez aux questions en cochant "Oui" ou "Non" pour découvrir votre profil.</p>
+
+    <form id="quizForm">
+
+        <div class="question" id="q1">
+            <p>1. Aimez-vous travailler avec des outils ou des machines ?</p>
+            <input type="radio" name="q1" value="R"> Oui
+            <input type="radio" name="q1" value=""> Non
+        </div>
+    
+        <div class="question" id="q2">
+            <p>2. Appréciez-vous les activités physiques comme le sport ou le bricolage ?</p>
+            <input type="radio" name="q2" value="R"> Oui
+            <input type="radio" name="q2" value=""> Non
+        </div>
+    
+        <div class="question" id="q3">
+            <p>3. Aimez-vous résoudre des problèmes pratiques ?</p>
+            <input type="radio" name="q3" value="R"> Oui
+            <input type="radio" name="q3" value=""> Non
+        </div>
+    
+        <div class="question" id="q4">
+            <p>4. Préférez-vous travailler en plein air plutôt qu’en bureau ?</p>
+            <input type="radio" name="q4" value="R"> Oui
+            <input type="radio" name="q4" value=""> Non
+        </div>
+    
+        <div class="question" id="q5">
+            <p>5. Aimez-vous construire ou réparer des objets ?</p>
+            <input type="radio" name="q5" value="R"> Oui
+            <input type="radio" name="q5" value=""> Non
+        </div>
+    
+        <div class="question" id="q6">
+            <p>6. Vous sentez-vous à l’aise dans des environnements techniques ou mécaniques ?</p>
+            <input type="radio" name="q6" value="R"> Oui
+            <input type="radio" name="q6" value=""> Non
+        </div>
+    
+        <div class="question" id="q7">
+            <p>7. Êtes-vous motivé par des tâches demandant de la force physique ?</p>
+            <input type="radio" name="q7" value="R"> Oui
+            <input type="radio" name="q7" value=""> Non
+        </div>
+    
+        <div class="question" id="q8">
+            <p>8. Aimez-vous analyser des données ou résoudre des problèmes complexes ?</p>
+            <input type="radio" name="q8" value="I"> Oui
+            <input type="radio" name="q8" value=""> Non
+        </div>
+    
+        <div class="question" id="q9">
+            <p>9. Êtes-vous curieux de comprendre comment les choses fonctionnent ?</p>
+            <input type="radio" name="q9" value="I"> Oui
+            <input type="radio" name="q9" value=""> Non
+        </div>
+    
+        <div class="question" id="q10">
+            <p>10. Préférez-vous lire des articles scientifiques ou techniques ?</p>
+            <input type="radio" name="q10" value="I"> Oui
+            <input type="radio" name="q10" value=""> Non
+        </div>
+    
+        <div class="question" id="q11">
+            <p>11. Vous aimez-vous poser des hypothèses et chercher des preuves pour les confirmer ?</p>
+            <input type="radio" name="q11" value="I"> Oui
+            <input type="radio" name="q11" value=""> Non
+        </div>
+    
+        <div class="question" id="q12">
+            <p>12. Aimez-vous expérimenter et tester des idées ?</p>
+            <input type="radio" name="q12" value="I"> Oui
+            <input type="radio" name="q12" value=""> Non
+        </div>
+    
+        <div class="question" id="q13">
+            <p>13. Vous sentez-vous attiré par les mathématiques ou la programmation ?</p>
+            <input type="radio" name="q13" value="I"> Oui
+            <input type="radio" name="q13" value=""> Non
+        </div>
+    
+        <div class="question" id="q14">
+            <p>14. Trouvez-vous satisfaction dans la recherche de solutions innovantes ?</p>
+            <input type="radio" name="q14" value="I"> Oui
+            <input type="radio" name="q14" value=""> Non
+        </div>
+    
+        <div class="question" id="q15">
+            <p>15. Aimez-vous créer ou concevoir des objets, des œuvres ou des projets ?</p>
+            <input type="radio" name="q15" value="A"> Oui
+            <input type="radio" name="q15" value=""> Non
+        </div>
+    
+        <div class="question" id="q16">
+            <p>16. Vous sentez-vous inspiré par des activités artistiques comme la peinture ou la musique ?</p>
+            <input type="radio" name="q16" value="A"> Oui
+            <input type="radio" name="q16" value=""> Non
+        </div>
+    
+        <div class="question" id="q17">
+            <p>17. Aimez-vous exprimer vos idées de manière originale ?</p>
+            <input type="radio" name="q17" value="A"> Oui
+            <input type="radio" name="q17" value=""> Non
+        </div>
+    
+        <div class="question" id="q18">
+            <p>18. Êtes-vous à l’aise dans des environnements où la créativité est encouragée ?</p>
+            <input type="radio" name="q18" value="A"> Oui
+            <input type="radio" name="q18" value=""> Non
+        </div>
+    
+        <div class="question" id="q19">
+            <p>19. Préférez-vous des tâches sans règles fixes pour laisser place à l'imagination ?</p>
+            <input type="radio" name="q19" value="A"> Oui
+            <input type="radio" name="q19" value=""> Non
+        </div>
+    
+        <div class="question" id="q20">
+            <p>20. Aimez-vous raconter des histoires ou écrire des poèmes ?</p>
+            <input type="radio" name="q20" value="A"> Oui
+            <input type="radio" name="q20" value=""> Non
+        </div>
+    
+        <div class="question" id="q21">
+            <p>21. Trouvez-vous satisfaction dans des formes d’art comme la danse ou le théâtre ?</p>
+            <input type="radio" name="q21" value="A"> Oui
+            <input type="radio" name="q21" value=""> Non
+        </div>
+    
+        <div class="question" id="q22">
+            <p>22. Aimez-vous aider les autres ou les accompagner dans leur développement ?</p>
+            <input type="radio" name="q22" value="S"> Oui
+            <input type="radio" name="q22" value=""> Non
+        </div>
+    
+        <div class="question" id="q23">
+            <p>23. Vous sentez-vous à l’aise pour expliquer ou enseigner quelque chose à autrui ?</p>
+            <input type="radio" name="q23" value="S"> Oui
+            <input type="radio" name="q23" value=""> Non
+        </div>
+    
+        <div class="question" id="q24">
+            <p>24. Aimez-vous travailler en équipe ou en collaboration ?</p>
+            <input type="radio" name="q24" value="S"> Oui
+            <input type="radio" name="q24" value=""> Non
+        </div>
+    
+        <div class="question" id="q25">
+            <p>25. Préférez-vous des environnements où vous pouvez interagir avec les gens ?</p>
+            <input type="radio" name="q25" value="S"> Oui
+            <input type="radio" name="q25" value=""> Non
+        </div>
+    
+        <div class="question" id="q26">
+            <p>26. Êtes-vous motivé par des activités qui apportent un impact positif sur la vie des autres ?</p>
+            <input type="radio" name="q26" value="S"> Oui
+            <input type="radio" name="q26" value=""> Non
+        </div>
+    
+        <div class="question" id="q27">
+            <p>27. Trouvez-vous satisfaction dans les métiers de service ou de soin ?</p>
+            <input type="radio" name="q27" value="S"> Oui
+            <input type="radio" name="q27" value=""> Non
+        </div>
+    
+        <div class="question" id="q28">
+            <p>28. Êtes-vous doué pour écouter et comprendre les problèmes des autres ?</p>
+            <input type="radio" name="q28" value="S"> Oui
+            <input type="radio" name="q28" value=""> Non
+        </div>
+    
+        <div class="question" id="q29">
+            <p>29. Aimez-vous diriger ou motiver une équipe ?</p>
+            <input type="radio" name="q29" value="E"> Oui
+            <input type="radio" name="q29" value=""> Non
+        </div>
+    
+        <div class="question" id="q30">
+            <p>30. Vous sentez-vous à l’aise pour convaincre ou négocier avec d’autres personnes ?</p>
+            <input type="radio" name="q30" value="E"> Oui
+            <input type="radio" name="q30" value=""> Non
+        </div>
+    
+        <div class="question" id="q31">
+            <p>31. Êtes-vous motivé par la prise d’initiatives et la gestion de projets ?</p>
+            <input type="radio" name="q31" value="E"> Oui
+            <input type="radio" name="q31" value=""> Non
+        </div>
+    
+        <div class="question" id="q32">
+            <p>32. Aimez-vous les défis qui nécessitent de la compétitivité ?</p>
+            <input type="radio" name="q32" value="E"> Oui
+            <input type="radio" name="q32" value=""> Non
+        </div>
+    
+        <div class="question" id="q33">
+            <p>33. Préférez-vous des activités impliquant des décisions rapides et décisives ?</p>
+            <input type="radio" name="q33" value="E"> Oui
+            <input type="radio" name="q33" value=""> Non
+        </div>
+    
+        <div class="question" id="q34">
+            <p>34. Vous sentez-vous à l’aise pour parler en public ou influencer les autres ?</p>
+            <input type="radio" name="q34" value="E"> Oui
+            <input type="radio" name="q34" value=""> Non
+        </div>
+    
+        <div class="question" id="q35">
+            <p>35. Trouvez-vous satisfaction dans des rôles de leadership ou de gestion ?</p>
+            <input type="radio" name="q35" value="E"> Oui
+            <input type="radio" name="q35" value=""> Non
+        </div>
+    
+        <div class="question" id="q36">
+            <p>36. Aimez-vous organiser ou classer des informations de manière structurée ?</p>
+            <input type="radio" name="q36" value="C"> Oui
+            <input type="radio" name="q36" value=""> Non
+        </div>
+    
+        <div class="question" id="q37">
+            <p>37. Êtes-vous à l’aise avec les chiffres, les budgets ou les tâches administratives ?</p>
+            <input type="radio" name="q37" value="C"> Oui
+            <input type="radio" name="q37" value=""> Non
+        </div>
+    
+        <div class="question" id="q38">
+            <p>38. Trouvez-vous satisfaction dans la gestion de tâches répétitives mais nécessaires ?</p>
+            <input type="radio" name="q38" value="C"> Oui
+            <input type="radio" name="q38" value=""> Non
+        </div>
+    
+        <div class="question" id="q39">
+            <p>39. Préférez-vous travailler dans un cadre clair avec des procédures bien définies ?</p>
+            <input type="radio" name="q39" value="C"> Oui
+            <input type="radio" name="q39" value=""> Non
+        </div>
+    
+        <div class="question" id="q40">
+            <p>40. Êtes-vous attiré par des environnements de bureau ou des tâches de secrétariat ?</p>
+            <input type="radio" name="q40" value="C"> Oui
+            <input type="radio" name="q40" value=""> Non
+        </div>
+    
+        <div class="question" id="q41">
+            <p>41. Aimez-vous travailler avec des systèmes, des bases de données ou des feuilles Excel ?</p>
+            <input type="radio" name="q41" value="C"> Oui
+            <input type="radio" name="q41" value=""> Non
+        </div>
+    
+        <div class="question" id="q42">
+            <p>42. Préférez-vous suivre des règles ou des instructions claires pour mener à bien un travail ?</p>
+            <input type="radio" name="q42" value="C"> Oui
+            <input type="radio" name="q42" value=""> Non
+        </div>
+    
+        <button type="button" onclick="calculerResultat()">Voir mon résultat</button>
+    </form>
+
+    <div class="results" id="result"></div>
+
+    <script>
+        function calculerResultat() {
+            const form = document.getElementById("quizForm");
+            const inputs = form.getElementsByTagName("input");
+            let scores = { R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 };
+
+            for (let input of inputs) {
+                if (input.checked && input.value) {
+                    scores[input.value]++;
+                }
+            }
+
+            let profil = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+            let profilsNoms = {
+                R: "Réaliste",
+                I: "Investigateur",
+                A: "Artistique",
+                S: "Social",
+                E: "Entreprenant",
+                C: "Conventionnel"
+            };
+
+            document.getElementById("result").innerHTML = 
+                `<p>Votre profil dominant est : <strong>${profilsNoms[profil]}</strong></p>`;
+        }
+    </script>
+
+</body>
+</html>
